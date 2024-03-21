@@ -4,8 +4,10 @@ import json
 
 class Job:
     def __init__(self, theader, outfile):
+        # init
         self.theader = theader
         self.f = open(outfile, "w")
+        # write
         self.f.write("<html>\n\t<head>\n\t</head>\n\t<body>\n\t\t<table border='1'>\n\t\t\t<thead>\n\t\t\t\t<tr>")
         self.f.write(''.join([f"\n\t\t\t\t\t<th>{v}</th>" for v in self.theader]))
         self.f.write("\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>")
